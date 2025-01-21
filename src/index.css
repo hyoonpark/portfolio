@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply m-0 antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* 다크모드 전환 애니메이션 */
+  * {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* 공통 컨테이너 스타일 */
+  .container-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* 섹션 공통 스타일 */
+  .section-padding {
+    @apply py-20;
+  }
+
+  /* 헤딩 공통 스타일 */
+  .section-heading {
+    @apply text-3xl font-extrabold text-gray-900 dark:text-dark-text text-center mb-12;
+  }
+
+  /* 카드 공통 스타일 */
+  .card {
+    @apply bg-white dark:bg-dark-card rounded-lg shadow-md overflow-hidden;
+  }
+
+  /* 버튼 공통 스타일 */
+  .btn-primary {
+    @apply px-4 py-2 bg-indigo-600 dark:bg-dark-primary text-white rounded-md 
+    hover:bg-indigo-700 dark:hover:bg-opacity-90 transition-all duration-200;
+  }
+
+  /* 링크 공통 스타일 */
+  .link {
+    @apply text-indigo-600 dark:text-dark-primary hover:text-indigo-700 
+    dark:hover:text-opacity-90 transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  /* 스크롤바 스타일링 */
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.gray.300') theme('colors.gray.100');
+  }
+
+  .dark .scrollbar-custom {
+    scrollbar-color: theme('colors.gray.600') theme('colors.gray.800');
+  }
+
+  /* 스크롤 스무스 효과 */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
+
+/* 로딩 스피너 애니메이션 */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* 페이지 전환 페이드 효과 */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+}
