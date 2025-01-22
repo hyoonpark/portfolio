@@ -1,11 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { sectionStyles } from '../styles/common';
+import { scrollAnimation, staggerChildren } from '../styles/animations';
 
 interface ContactLink {
   name: string;
   url: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className: string }>;
 }
 
 const Contact: React.FC = () => {
@@ -28,18 +30,21 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-white dark:bg-dark-bg">
-      <div className="container-wrapper">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center"
+    <section id="contact" className={sectionStyles.wrapper}>
+      <div className={sectionStyles.container}>
+        <motion.h2 
+          className={sectionStyles.title}
+          {...scrollAnimation}
         >
-          <h2 className="section-heading">
-            Contact Me
-          </h2>
+          Contact Me
+        </motion.h2>
+        
+        <motion.div 
+          className={sectionStyles.content}
+          variants={staggerChildren.container}
+          initial="initial"
+          animate="animate"
+        >
           <div className="flex justify-center space-x-8">
             {contactLinks.map((link) => (
               <motion.a
@@ -47,22 +52,21 @@ const Contact: React.FC = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                variants={staggerChildren.item}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex flex-col items-center text-gray-600 dark:text-gray-300 
-                hover:text-indigo-600 dark:hover:text-dark-primary transition-colors duration-200"
+                hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
               >
                 <link.icon className="w-8 h-8 mb-2" />
                 <span className="text-sm">{link.name}</span>
               </motion.a>
             ))}
           </div>
+          
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            viewport={{ once: true }}
-            className="mt-12 text-gray-600 dark:text-gray-300"
+            variants={staggerChildren.item}
+            className="mt-12 text-center text-gray-600 dark:text-gray-300"
           >
             <p className="mb-4">
               새로운 기회를 찾고 있습니다.

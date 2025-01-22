@@ -4,7 +4,7 @@ import profileImage from '../assets/profile.JPG';
 
 const Hero: React.FC = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-bg">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-dark-bg">
       <div className="container-wrapper">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

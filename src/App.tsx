@@ -2,7 +2,11 @@ import React from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
+// import About from './components/About';
+import Education from './components/Education';
 import Experience from './components/Experience';
+import Certificates from './components/Certificates';
+import Curriculum from './components/Curriculum';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -14,7 +18,11 @@ const App: React.FC = () => {
       <div className="min-h-screen bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-text transition-colors duration-200">
         <Header />
         <Hero />
+        {/* <About /> */}
+        <Education />
         <Experience />
+        <Certificates />
+        <Curriculum />
         <Skills />
         <Projects />
         <Contact />

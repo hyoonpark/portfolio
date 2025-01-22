@@ -15,8 +15,12 @@ const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   const menuItems: MenuItem[] = [
-    { name: 'About', href: 'about' },
+    { name: 'About', href: 'hero' },
+    // { name: 'About', href: 'about' },
+    { name: 'Education', href: 'education' },
     { name: 'Experience', href: 'experience' },
+    { name: 'Certificates', href: 'certificates' },
+    { name: 'Curriculum', href: 'curriculum' },
     { name: 'Skills', href: 'skills' },
     { name: 'Projects', href: 'projects' },
     { name: 'Contact', href: 'contact' },
@@ -24,13 +28,20 @@ const Header: React.FC = () => {
 
   return (
     <nav className="fixed w-full bg-white dark:bg-dark-card shadow-md z-50">
-      <div className="container-wrapper">
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-xl font-bold dark:text-dark-text">HaYoon</h1>
+              <Link
+                to="hero"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer"
+              >
+                <h1 className="text-xl font-bold text-indigo-600 dark:text-indigo-400">HaYoon</h1>
+              </Link>
             </div>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {menuItems.map((item) => (
                   <Link
@@ -38,7 +49,9 @@ const Header: React.FC = () => {
                     to={item.href}
                     smooth={true}
                     duration={500}
-                    className="cursor-pointer px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+                    className="cursor-pointer px-3 py-2 rounded-md text-sm font-medium 
+                    text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 
+                    transition-colors duration-200"
                   >
                     {item.name}
                   </Link>
@@ -49,7 +62,8 @@ const Header: React.FC = () => {
           <div className="flex items-center">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-md text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none"
+              className="p-2 rounded-md text-gray-700 hover:text-indigo-600 
+              dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-200 focus:outline-none"
               aria-label="Toggle theme"
             >
               {theme === 'dark' ? (
@@ -58,10 +72,12 @@ const Header: React.FC = () => {
                 <MoonIcon className="h-6 w-6" aria-hidden="true" />
               )}
             </button>
-            <div className="md:hidden ml-2">
+            <div className="lg:hidden ml-2">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none"
+                className="inline-flex items-center justify-center p-2 rounded-md 
+                text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 
+                transition-colors duration-200 focus:outline-none"
                 aria-label="Toggle menu"
               >
                 {isOpen ? (
@@ -84,15 +100,17 @@ const Header: React.FC = () => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-dark-card">
+        <div className="lg:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-dark-card border-t dark:border-gray-800">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+                className="cursor-pointer block px-3 py-2 rounded-md text-base font-medium 
+                text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 
+                transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
