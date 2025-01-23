@@ -5,7 +5,7 @@ import { FaCode, FaLaptopCode } from 'react-icons/fa';
 const Curriculum: React.FC = () => {
   const courses = [
     {
-      title: "신세계I&C 스파로스 아카데미 4기",
+      title: "신세계아이앤씨 스파로스 아카데미 4기",
       period: "2024.02 ~ 2024.07",
       icon: <FaLaptopCode />,
       details: [

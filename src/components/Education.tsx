@@ -19,7 +19,7 @@ const Education: React.FC = () => {
                   부산대학교
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  유기소재시스템공학과 (2015.03 ~ 2021.02)
+                  유기소재시스템공학과 학사 (2015.03 ~ 2021.02)
                 </p>
               </div>
             </div>
