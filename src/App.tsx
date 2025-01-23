@@ -7,6 +7,7 @@ import Education from './components/Education';
 import Experience from './components/Experience';
 import Certificates from './components/Certificates';
 import Curriculum from './components/Curriculum';
+import Awards from './components/Awards';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -23,6 +24,7 @@ const App: React.FC = () => {
         <Experience />
         <Certificates />
         <Curriculum />
+        <Awards />
         <Skills />
         <Projects />
         <Contact />
