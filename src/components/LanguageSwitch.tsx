@@ -16,7 +16,7 @@ const LanguageSwitch: React.FC = () => {
       text-gray-700 hover:text-indigo-600 dark:text-gray-300 
       dark:hover:text-indigo-400 transition-colors duration-200"
     >
-      {i18n.language === 'ko' ? 'EN' : 'KO'}
+      {i18n.language === 'en' ? 'KO' : 'EN'}
     </button>
   );
 };
