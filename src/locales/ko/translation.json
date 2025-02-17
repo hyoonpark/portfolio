@@ -1,0 +1,267 @@
+{
+  "header": {
+    "about": "소개",
+    "education": "학력",
+    "experience": "경험",
+    "certificates": "자격증",
+    "curriculum": "교육과정",
+    "awards": "수상내역",
+    "skills": "기술",
+    "projects": "프로젝트",
+    "contact": "연락처"
+  },
+  "hero": {
+    "greeting": "안녕하세요",
+    "title": "몰입할 줄 아는<br/>백엔드 개발자 박하윤입니다",
+    "description": "삼성 청년 SW 아카데미와 신세계아이앤씨 스파로스 아카데미를 통해<br/>실무 경험을 쌓았으며, 백엔드 개발에 대한 전문성과 열정을 추구합니다.",
+    "contactButton": "연락하기"
+  },
+  "education": {
+    "title": "학력",
+    "university": "부산대학교",
+    "major": "유기소재시스템공학과",
+    "period": "2015.03 ~ 2021.02"
+  },
+  "experience": {
+    "title": "경험",
+    "project1": {
+      "title": "음주 기록 애플리케이션",
+      "period": "2023.10 ~ 운영 예정",
+      "description": "Spring Boot, Spring Cloud 기반 MSA 아키텍처 구현",
+      "details": {
+        "1": "Java,Spring Boot",
+        "2": "홈서버를 활용한 인프라 구축",
+        "3": "CI/CD 파이프라인 구축 및 운영 경험",
+        "4": "Spring Security와 JWT를 이용한 인증/인가 구현",
+        "5": "JPA/Querydsl을 활용한 데이터 접근 계층 구현"
+      }
+    }
+  },
+  "certificates": {
+    "title": "자격증",
+    "engineer": {
+      "title": "정보처리기사",
+      "date": "2024.06",
+      "organization": "한국산업인력공단"
+    },
+    "sqld": {
+      "title": "SQLD",
+      "date": "2024.06",
+      "organization": "한국데이터산업진흥원"
+    },
+    "opic": {
+      "title": "OPIc",
+      "date": "2024.08",
+      "organization": "ACTFL",
+      "level": "Intermediate Mid"
+    }
+  },
+  "curriculum": {
+    "title": "교육과정",
+    "sparos": {
+      "title": "신세계아이앤씨 스파로스 아카데미 4기",
+      "period": "2024.02 ~ 2024.07",
+      "details": {
+        "1": "MSA 기반 애플리케이션 개발 과정",
+        "2": "Spring Cloud, AWS 기반 마이크로서비스 아키텍처 학습",
+        "3": "실무 프로젝트 경험"
+      }
+    },
+    "ssafy": {
+      "title": "삼성 청년 SW 아카데미 9기",
+      "period": "2023.01 ~ 2023.12",
+      "details": {
+        "1": "알고리즘, 자료구조 심화 학습",
+        "2": "Spring Boot 기반 웹 서비스 개발",
+        "3": "팀 프로젝트 수행 및 협업 경험"
+      }
+    }
+  },
+  "awards": {
+    "title": "수상내역",
+    "sparos": {
+      "title": "신세계아이앤씨 대표이사상",
+      "date": "2024.07",
+      "organization": "신세계아이앤씨",
+      "description": "신세계아이앤씨 스파로스 아카데미 우수 수료"
+    },
+    "clone": {
+      "title": "신세계아이앤씨 스파로스 아카데미 클론코딩 프로젝트 최우수상",
+      "date": "2024.04",
+      "organization": "신세계아이앤씨",
+      "description": "쓱닷컴 클론코딩 프로젝트 최우수상"
+    },
+    "ssafy": {
+      "title": "삼성 청년 SW 아카데미 공통 프로젝트 우수상",
+      "date": "2023.08",
+      "organization": "삼성전자",
+      "description": "체험형 마약 예방 플랫폼 개발"
+    }
+  },
+  "skills": {
+    "title": "기술 스택",
+    "language": {
+      "title": "언어",
+      "java": {
+        "1": "객체지향 프로그래밍 이해 및 활용",
+        "2": "Stream API, Lambda 등 Java 8 이상 기능 활용",
+        "3": "Multi-threading 및 동시성 프로그래밍",
+        "4": "JVM 구조 이해 및 메모리 관리"
+      },
+      "python": {
+        "1": "기본 문법 및 객체지향 프로그래밍",
+        "2": "데이터 분석 및 처리",
+        "3": "웹 크롤링 및 자동화 스크립트 작성"
+      },
+      "javascript": {
+        "1": "ES6+ 문법 활용",
+        "2": "비동기 프로그래밍(Promise, async/await)",
+        "3": "DOM 조작 및 이벤트 핸들링"
+      }
+    },
+    "backend": {
+      "title": "백엔드",
+      "springboot": {
+        "1": "RESTful API 설계 및 구현",
+        "2": "Spring Security를 활용한 인증/인가",
+        "3": "JPA/Hibernate를 이용한 데이터 접근 계층 구현"
+      },
+      "springcloud": {
+        "1": "MSA 아키텍처 설계 및 구현",
+        "2": "Service Discovery, Config Server 활용",
+        "3": "API Gateway, Circuit Breaker 패턴 적용"
+      },
+      "django": {
+        "1": "MVT 패턴 기반 웹 애플리케이션 개발",
+        "2": "ORM을 활용한 데이터베이스 조작",
+        "3": "Django REST framework 활용"
+      },
+      "flask": {
+        "1": "경량 웹 애플리케이션 개발",
+        "2": "RESTful API 구현",
+        "3": "데이터베이스 연동 및 처리"
+      },
+      "googlecolab": {
+        "1": "데이터 분석 및 머신러닝 모델 개발",
+        "2": "GPU 활용 학습 환경 구성"
+      }
+    },
+    "database": {
+      "title": "데이터베이스",
+      "mysql": {
+        "1": "데이터베이스 설계 및 모델링",
+        "2": "성능 최적화 및 인덱스 설계",
+        "3": "트랜잭션 관리"
+      },
+      "mariadb": {
+        "1": "관계형 데이터베이스 구성",
+        "2": "트랜잭션 관리 및 성능 최적화"
+      },
+      "postgresql": {
+        "1": "관계형 데이터베이스 관리",
+        "2": "JSON 데이터 타입 활용"
+      },
+      "mongodb": {
+        "1": "NoSQL 데이터베이스 설계",
+        "2": "분산 데이터베이스 구성"
+      }
+    },
+    "devops": {
+      "title": "DevOps",
+      "aws": {
+        "1": "EC2, RDS, S3 등 핵심 서비스 활용",
+        "2": "CloudWatch를 통한 모니터링"
+      },
+      "ubuntu": {
+        "1": "리눅스 서버 환경 구성 및 관리",
+        "2": "쉘 스크립트 작성"
+      },
+      "docker": {
+        "1": "컨테이너 이미지 빌드 및 배포",
+        "2": "Docker Compose를 통한 멀티 컨테이너 관리"
+      },
+      "nginx": {
+        "1": "웹 서버 설정 및 관리",
+        "2": "로드 밸런싱 구성",
+        "3": "SSL/TLS 설정"
+      },
+      "jenkins": {
+        "1": "CI/CD 파이프라인 구축",
+        "2": "자동화 빌드 및 배포"
+      },
+      "githubactions": {
+        "1": "CI/CD 워크플로우 구성",
+        "2": "자동화된 테스트 및 배포 파이프라인 구축"
+      }
+    },
+    "collaboration": {
+      "title": "협업 도구",
+      "git": {
+        "1": "브랜치 전략 수립 및 적용",
+        "2": "코드 리뷰 및 버전 관리"
+      },
+      "jira": {
+        "1": "애자일/스크럼 프로세스 관리",
+        "2": "이슈 트래킹 및 프로젝트 관리"
+      },
+      "gerrit": {
+        "1": "코드 리뷰 시스템 활용",
+        "2": "변경사항 관리 및 통합"
+      }
+    }
+  },
+  "projects": {
+    "title": "프로젝트",
+    "goodsduck": {
+      "title": "마이크로서비스 기반 굿즈 경매 플랫폼",
+      "period": "2024.04 - 2024.07",
+      "team": "백엔드 3명, 프론트엔드 2명",
+      "description": "MSA 아키텍처를 활용한 대규모 트래픽 처리가 가능한 경매 시스템 구축",
+      "details": {
+        "1": "마이페이지, 검색, 후기 마이크로서비스 개발",
+        "2": "Kafka를 활용한 이벤트 기반 아키텍처 구현",
+        "3": "Docker, Docker Compose를 활용한 컨테이너 기반 배포 환경 구축"
+      },
+      "techStack": ["Spring Boot", "Spring Cloud", "Kafka", "Docker", "Kubernetes", "MySQL", "Redis"],
+      "githubUrl": "https://github.com/4-Nuga"
+    },
+    "ssg": {
+      "title": "쓱닷컴 클론코딩",
+      "period": "2024.02 - 2024.04",
+      "team": "백엔드 3명, 프론트엔드 2명",
+      "description": "쓱닷컴의 핵심 기능을 클론코딩하여 설계부터 개발까지 진행",
+      "details": {
+        "1": "querydsl을 활용한 카테고리 상품 조회 최적화",
+        "2": "쿠키를 활용한 비회원 장바구니 구현",
+        "3": "elasticsearch를 활용한 검색 기능 구현"
+      },
+      "techStack": ["Java", "Spring Boot", "PostGIS", "GitHub Actions", "Docker", "AWS"],
+      "githubUrl": "https://github.com/3-isekaiSSG"
+    },
+    "drink": {
+      "title": "건강한 음주생활을 위한 음주 기록 트래커",
+      "period": "2023.10 - 2023.11",
+      "team": "백엔드 3명, 프론트엔드 3명",
+      "description": "음주량과 건강 상태를 기록하고 분석하는 서비스",
+      "details": {
+        "1": "Spring Boot 기반 백엔드 서버 개발",
+        "2": "사용자 음주 패턴 분석 및 리포트 생성",
+        "3": "건강 정보 API 연동 및 데이터 시각화"
+      },
+      "techStack": ["Spring Boot", "MySQL", "AWS", "Docker", "Jenkins"],
+      "githubUrl": "https://github.com/official-dev-ohyes/weeklivernote_v2"
+    }
+  },
+  "contact": {
+    "title": "연락처",
+    "message": {
+      "line1": "새로운 기회를 찾고 있습니다.",
+      "line2": "함께 일하고 싶으시다면 연락 주세요!"
+    },
+    "links": {
+      "github": "https://github.com/hyoonpark",
+      "linkedin": "https://www.linkedin.com/in/hyoonpark/",
+      "email": "the.day0619@gmail.com"
+    }
+  }
+} 

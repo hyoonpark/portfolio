@@ -1,0 +1,267 @@
+{
+  "header": {
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "certificates": "Certificates",
+    "curriculum": "Curriculum",
+    "awards": "Awards",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello",
+    "title": "I'm HaYoon Park, a Backend Developer who knows how to focus",
+    "description": "I gained practical experience through Samsung SW Academy and Shinsegae I&C Spharos Academy, pursuing expertise and passion in backend development.",
+    "contactButton": "Contact Me"
+  },
+  "education": {
+    "title": "Education",
+    "university": "Pusan National University",
+    "major": "Organic Materials Science and Engineering",
+    "period": "Mar 2015 - Feb 2021"
+  },
+  "experience": {
+    "title": "Experience",
+    "project1": {
+      "title": "Drinking Record Application",
+      "period": "Oct 2023 ~ Present",
+      "description": "Implemented MSA architecture based on Spring Boot and Spring Cloud",
+      "details": {
+        "1": "Java, Spring Boot",
+        "2": "Built infrastructure using home server",
+        "3": "Set up and operated CI/CD pipeline",
+        "4": "Implemented authentication/authorization using Spring Security and JWT",
+        "5": "Implemented data access layer using JPA/Querydsl"
+      }
+    }
+  },
+  "certificates": {
+    "title": "Certificates",
+    "engineer": {
+      "title": "Engineer Information Processing",
+      "date": "Jun 2024",
+      "organization": "Human Resources Development Service of Korea"
+    },
+    "sqld": {
+      "title": "SQLD",
+      "date": "Jun 2024",
+      "organization": "Korea Data Agency"
+    },
+    "opic": {
+      "title": "OPIc",
+      "date": "Aug 2024",
+      "organization": "ACTFL",
+      "level": "Intermediate Mid"
+    }
+  },
+  "curriculum": {
+    "title": "Curriculum",
+    "sparos": {
+      "title": "Shinsegae I&C Spharos Academy 4th",
+      "period": "Feb 2024 ~ Jul 2024",
+      "details": {
+        "1": "MSA-based Application Development Course",
+        "2": "Learning Microservice Architecture with Spring Cloud and AWS",
+        "3": "Practical Project Experience"
+      }
+    },
+    "ssafy": {
+      "title": "Samsung SW Academy For Youth 9th",
+      "period": "Jan 2023 ~ Dec 2023",
+      "details": {
+        "1": "Advanced Algorithm and Data Structure Studies",
+        "2": "Web Service Development with Spring Boot",
+        "3": "Team Project and Collaboration Experience"
+      }
+    }
+  },
+  "awards": {
+    "title": "Awards",
+    "sparos": {
+      "title": "CEO Award of Shinsegae I&C",
+      "date": "Jul 2024",
+      "organization": "Shinsegae I&C",
+      "description": "Excellence in Spharos Academy Completion"
+    },
+    "clone": {
+      "title": "Best Project Award in Clone Coding Project",
+      "date": "Apr 2024",
+      "organization": "Shinsegae I&C",
+      "description": "SSG.COM Clone Coding Project"
+    },
+    "ssafy": {
+      "title": "Excellence Award in Common Project",
+      "date": "Aug 2023",
+      "organization": "Samsung Electronics",
+      "description": "Developed Experiential Drug Prevention Platform"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "language": {
+      "title": "Language",
+      "java": {
+        "1": "Understanding and application of Object-Oriented Programming",
+        "2": "Utilizing Java 8+ features like Stream API and Lambda",
+        "3": "Multi-threading and Concurrent Programming",
+        "4": "Understanding JVM architecture and memory management"
+      },
+      "python": {
+        "1": "Basic syntax and Object-Oriented Programming",
+        "2": "Data analysis and processing",
+        "3": "Web crawling and automation scripts"
+      },
+      "javascript": {
+        "1": "ES6+ syntax utilization",
+        "2": "Asynchronous Programming (Promise, async/await)",
+        "3": "DOM manipulation and event handling"
+      }
+    },
+    "backend": {
+      "title": "Backend",
+      "springboot": {
+        "1": "RESTful API design and implementation",
+        "2": "Authentication/Authorization using Spring Security",
+        "3": "Data access layer implementation using JPA/Hibernate"
+      },
+      "springcloud": {
+        "1": "MSA architecture design and implementation",
+        "2": "Service Discovery and Config Server utilization",
+        "3": "API Gateway and Circuit Breaker pattern application"
+      },
+      "django": {
+        "1": "Web application development based on MVT pattern",
+        "2": "Database manipulation using ORM",
+        "3": "Django REST framework utilization"
+      },
+      "flask": {
+        "1": "Lightweight web application development",
+        "2": "RESTful API implementation",
+        "3": "Database integration and processing"
+      },
+      "googlecolab": {
+        "1": "Data analysis and machine learning model development",
+        "2": "GPU-based learning environment setup"
+      }
+    },
+    "database": {
+      "title": "Database",
+      "mysql": {
+        "1": "Database design and modeling",
+        "2": "Performance optimization and index design",
+        "3": "Transaction management"
+      },
+      "mariadb": {
+        "1": "Relational database configuration",
+        "2": "Transaction management and performance optimization"
+      },
+      "postgresql": {
+        "1": "Relational database management",
+        "2": "JSON data type utilization"
+      },
+      "mongodb": {
+        "1": "NoSQL database design",
+        "2": "Distributed database configuration"
+      }
+    },
+    "devops": {
+      "title": "DevOps",
+      "aws": {
+        "1": "Core services utilization (EC2, RDS, S3, etc.)",
+        "2": "Monitoring with CloudWatch"
+      },
+      "ubuntu": {
+        "1": "Linux server environment setup and management",
+        "2": "Shell script writing"
+      },
+      "docker": {
+        "1": "Container image build and deployment",
+        "2": "Multi-container management with Docker Compose"
+      },
+      "nginx": {
+        "1": "Web server configuration and management",
+        "2": "Load balancing setup",
+        "3": "SSL/TLS configuration"
+      },
+      "jenkins": {
+        "1": "CI/CD pipeline setup",
+        "2": "Automated build and deployment"
+      },
+      "githubactions": {
+        "1": "CI/CD workflow configuration",
+        "2": "Automated test and deployment pipeline setup"
+      }
+    },
+    "collaboration": {
+      "title": "Collaboration Tools",
+      "git": {
+        "1": "Branch strategy establishment and application",
+        "2": "Code review and version control"
+      },
+      "jira": {
+        "1": "Agile/Scrum process management",
+        "2": "Issue tracking and project management"
+      },
+      "gerrit": {
+        "1": "Code review system utilization",
+        "2": "Change management and integration"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "goodsduck": {
+      "title": "Microservice-based Goods Auction Platform",
+      "period": "Apr 2024 - Jul 2024",
+      "team": "3 Backend, 2 Frontend Developers",
+      "description": "Built an auction system capable of handling large-scale traffic using MSA architecture",
+      "details": {
+        "1": "Developed microservices for mypage, search, and reviews",
+        "2": "Implemented event-driven architecture using Kafka",
+        "3": "Set up container-based deployment environment using Docker and Docker Compose"
+      },
+      "techStack": ["Spring Boot", "Spring Cloud", "Kafka", "Docker", "Kubernetes", "MySQL", "Redis"],
+      "githubUrl": "https://github.com/4-Nuga"
+    },
+    "ssg": {
+      "title": "SSG.COM Clone Coding",
+      "period": "Feb 2024 - Apr 2024",
+      "team": "3 Backend, 2 Frontend Developers",
+      "description": "Cloned core features of SSG.COM from design to development",
+      "details": {
+        "1": "Optimized category product queries using querydsl",
+        "2": "Implemented non-member cart using cookies",
+        "3": "Implemented search functionality using elasticsearch"
+      },
+      "techStack": ["Java", "Spring Boot", "PostGIS", "GitHub Actions", "Docker", "AWS"],
+      "githubUrl": "https://github.com/3-isekaiSSG"
+    },
+    "drink": {
+      "title": "Drinking Record Tracker for Healthy Drinking Habits",
+      "period": "Oct 2023 - Nov 2023",
+      "team": "3 Backend, 3 Frontend Developers",
+      "description": "Service for recording and analyzing drinking amount and health status",
+      "details": {
+        "1": "Developed backend server based on Spring Boot",
+        "2": "Analyzed user drinking patterns and generated reports",
+        "3": "Integrated health information API and visualized data"
+      },
+      "techStack": ["Spring Boot", "MySQL", "AWS", "Docker", "Jenkins"],
+      "githubUrl": "https://github.com/official-dev-ohyes/weeklivernote_v2"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "message": {
+      "line1": "I'm looking for new opportunities.",
+      "line2": "Feel free to contact me if you'd like to work together!"
+    },
+    "links": {
+      "github": "https://github.com/hyoonpark",
+      "linkedin": "https://www.linkedin.com/in/hyoonpark",
+      "email": "the.day0619@gmail.com"
+    }
+  }
+} 
