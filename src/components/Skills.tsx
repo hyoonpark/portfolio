@@ -65,7 +65,7 @@ const Skills: React.FC = () => {
           details: [
             "MSA 아키텍처 설계 및 구현",
             "Service Discovery, Config Server 활용",
-            "API Gateway, Circuit Breaker 패턴 적용"
+            "API Gateway 적용"
           ]
         },
         {
