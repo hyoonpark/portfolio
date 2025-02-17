@@ -8,17 +8,17 @@ const Experience: React.FC = () => {
   const experiences = [
     {
       id: 1,
-      title: "저속 노화 기록 애플리케이션",
+      title: "음주 기록 애플리케이션",
       period: "2023.10 ~ 운영 예정",
       icon: <FaCloud />,
       description: [
-        "Spring Boot, Spring Cloud 기반 MSA 아키텍처 구현",
-        "AWS ECS, RDS 활용한 클라우드 인프라 구축",
+        "Java, Spring Boot",
+        "홈서버를 활용한 인프라 구축",
         "CI/CD 파이프라인 구축 및 운영 경험",
         "Spring Security와 JWT를 이용한 인증/인가 구현",
         "JPA/Querydsl을 활용한 데이터 접근 계층 구현"
       ],
-      techStack: ["Spring Boot", "Spring Cloud", "AWS", "Docker", "Jenkins"]
+      techStack: ["Java", "Spring Boot", "Docker", "Jenkins"]
     }
   ];
 
