@@ -1,28 +1,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaTrophy } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import { sectionStyles } from '../styles/common';
 import { scrollAnimation, staggerChildren } from '../styles/animations';
 
 const Awards: React.FC = () => {
+  const { t } = useTranslation();
+
   const awards = [
     {
-      title: "신세계아이앤씨 대표이사상",
-      date: "2024.07",
-      organization: "신세계아이앤씨",
-      description: "신세계아이앤씨 스파로스 아카데미 우수 수료"
+      title: t('awards.sparos.title'),
+      date: t('awards.sparos.date'),
+      organization: t('awards.sparos.organization'),
+      description: t('awards.sparos.description')
     },
     {
-      title: "신세계아이앤씨 스파로스 아카데미 클론코딩 프로젝트 최우수상",
-      date: "2024.04",
-      organization: "신세계아이앤씨",
-      description: "쓱닷컴 클론코딩 프로젝트 최우수상"
+      title: t('awards.clone.title'),
+      date: t('awards.clone.date'),
+      organization: t('awards.clone.organization'),
+      description: t('awards.clone.description')
     },
     {
-      title: "삼성 청년 SW 아카데미 공통 프로젝트 우수상",
-      date: "2023.08",
-      organization: "삼성전자",
-      description: "체험형 마약 예방 플랫폼 개발"
+      title: t('awards.ssafy.title'),
+      date: t('awards.ssafy.date'),
+      organization: t('awards.ssafy.organization'),
+      description: t('awards.ssafy.description')
     }
   ];
 
@@ -33,7 +36,7 @@ const Awards: React.FC = () => {
           className={sectionStyles.title}
           {...scrollAnimation}
         >
-          Awards
+          {t('awards.title')}
         </motion.h2>
         
         <motion.div 

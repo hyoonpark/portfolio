@@ -1,28 +1,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCertificate, FaDatabase, FaLanguage } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import { sectionStyles } from '../styles/common';
 
 const Certificates: React.FC = () => {
+  const { t } = useTranslation();
+
   const certificates = [
     {
-      title: "정보처리기사",
-      date: "2024.06",
+      title: t('certificates.engineer.title'),
+      date: t('certificates.engineer.date'),
       icon: <FaCertificate />,
-      organization: "한국산업인력공단"
+      organization: t('certificates.engineer.organization')
     },
     {
-      title: "SQLD",
-      date: "2024.06",
+      title: t('certificates.sqld.title'),
+      date: t('certificates.sqld.date'),
       icon: <FaDatabase />,
-      organization: "한국데이터산업진흥원"
+      organization: t('certificates.sqld.organization')
     },
     {
-      title: "OPIc",
-      date: "2024.08",
+      title: t('certificates.opic.title'),
+      date: t('certificates.opic.date'),
       icon: <FaLanguage />,
-      organization: "ACTFL",
-      level: "Intermediate Mid"
+      organization: t('certificates.opic.organization'),
+      level: t('certificates.opic.level')
     }
   ];
 
@@ -30,7 +33,7 @@ const Certificates: React.FC = () => {
     <section id="certificates" className={sectionStyles.wrapper}>
       <div className={sectionStyles.container}>
         <motion.h2 className={sectionStyles.title}>
-          Certificates
+          {t('certificates.title')}
         </motion.h2>
 
         <div className={`${sectionStyles.content} ${sectionStyles.grid}`}>

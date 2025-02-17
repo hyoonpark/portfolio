@@ -1,22 +1,36 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCloud } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import { sectionStyles } from '../styles/common';
 import { scrollAnimation, staggerChildren } from '../styles/animations';
 
+interface ExperienceItem {
+  id: number;
+  title: string;
+  period: string;
+  icon: React.ReactNode;
+  description: string;
+  details: string[];
+  techStack: string[];
+}
+
 const Experience: React.FC = () => {
-  const experiences = [
+  const { t } = useTranslation();
+
+  const experiences: ExperienceItem[] = [
     {
       id: 1,
-      title: "음주 기록 애플리케이션",
-      period: "2023.10 ~ 운영 예정",
+      title: t('experience.project1.title'),
+      period: t('experience.project1.period'),
       icon: <FaCloud />,
-      description: [
-        "Java, Spring Boot",
-        "홈서버를 활용한 인프라 구축",
-        "CI/CD 파이프라인 구축 및 운영 경험",
-        "Spring Security와 JWT를 이용한 인증/인가 구현",
-        "JPA/Querydsl을 활용한 데이터 접근 계층 구현"
+      description: t('experience.project1.description'),
+      details: [
+        t('experience.project1.details.1'),
+        t('experience.project1.details.2'),
+        t('experience.project1.details.3'),
+        t('experience.project1.details.4'),
+        t('experience.project1.details.5')
       ],
       techStack: ["Java", "Spring Boot", "Docker", "Jenkins"]
     }
@@ -29,7 +43,7 @@ const Experience: React.FC = () => {
           className={sectionStyles.title}
           {...scrollAnimation}
         >
-          Experience
+          {t('experience.title')}
         </motion.h2>
 
         <motion.div 
@@ -55,14 +69,17 @@ const Experience: React.FC = () => {
                   <p className="text-gray-500 dark:text-gray-400 mb-4">
                     {exp.period}
                   </p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    {exp.description}
+                  </p>
                   <ul className="space-y-2 mb-4">
-                    {exp.description.map((desc, idx) => (
+                    {exp.details.map((detail, idx) => (
                       <li 
                         key={idx}
-                        className="text-gray-600 dark:text-gray-300 flex items-center"
+                        className="text-gray-600 dark:text-gray-300 flex items-start"
                       >
-                        <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2"></span>
-                        {desc}
+                        <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full mr-2 mt-2"></span>
+                        <span>{detail}</span>
                       </li>
                     ))}
                   </ul>
@@ -70,8 +87,7 @@ const Experience: React.FC = () => {
                     {exp.techStack.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 text-sm bg-indigo-100 dark:bg-indigo-900 
-                        text-indigo-600 dark:text-indigo-300 rounded-full"
+                        className={sectionStyles.tag}
                       >
                         {tech}
                       </span>

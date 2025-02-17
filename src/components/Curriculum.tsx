@@ -1,27 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCode, FaLaptopCode } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Curriculum: React.FC = () => {
+  const { t } = useTranslation();
+
   const courses = [
     {
-      title: "신세계아이앤씨 스파로스 아카데미 4기",
-      period: "2024.02 ~ 2024.07",
+      title: t('curriculum.sparos.title'),
+      period: t('curriculum.sparos.period'),
       icon: <FaLaptopCode />,
       details: [
-        "MSA 기반 애플리케이션 개발 과정",
-        "Spring Cloud, AWS 기반 마이크로서비스 아키텍처 학습",
-        "실무 프로젝트 경험"
+        t('curriculum.sparos.details.1'),
+        t('curriculum.sparos.details.2'),
+        t('curriculum.sparos.details.3')
       ]
     },
     {
-      title: "삼성 청년 SW 아카데미 9기",
-      period: "2023.01 ~ 2023.12",
+      title: t('curriculum.ssafy.title'),
+      period: t('curriculum.ssafy.period'),
       icon: <FaCode />,
       details: [
-        "알고리즘, 자료구조 심화 학습",
-        "Spring Boot 기반 웹 서비스 개발",
-        "팀 프로젝트 수행 및 협업 경험"
+        t('curriculum.ssafy.details.1'),
+        t('curriculum.ssafy.details.2'),
+        t('curriculum.ssafy.details.3')
       ]
     }
   ];
@@ -34,7 +37,7 @@ const Curriculum: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white"
         >
-          Curriculum
+          {t('curriculum.title')}
         </motion.h2>
 
         <div className="max-w-4xl mx-auto space-y-8">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import { sectionStyles } from '../styles/common';
 import { scrollAnimation, staggerChildren } from '../styles/animations';
 
@@ -11,22 +12,24 @@ interface ContactLink {
 }
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
+
   const contactLinks: ContactLink[] = [
     {
       name: 'GitHub',
-      url: 'https://github.com/hyoonpark',
+      url: t('contact.links.github'),
       icon: FaGithub,
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/hyoonpark/',
+      url: t('contact.links.linkedin'),
       icon: FaLinkedin,
     },
     {
       name: 'Email',
-      url: 'mailto:the.day0619@gmail.com',
+      url: `mailto:${t('contact.links.email')}`,
       icon: FaEnvelope,
-    },
+    }
   ];
 
   return (
@@ -36,7 +39,7 @@ const Contact: React.FC = () => {
           className={sectionStyles.title}
           {...scrollAnimation}
         >
-          Contact Me
+          {t('contact.title')}
         </motion.h2>
         
         <motion.div 
@@ -63,15 +66,15 @@ const Contact: React.FC = () => {
               </motion.a>
             ))}
           </div>
-          
+
           <motion.div
             variants={staggerChildren.item}
             className="mt-12 text-center text-gray-600 dark:text-gray-300"
           >
             <p className="mb-4">
-              새로운 기회를 찾고 있습니다.
+              {t('contact.message.line1')}
               <br />
-              함께 일하고 싶으시다면 연락 주세요!
+              {t('contact.message.line2')}
             </p>
           </motion.div>
         </motion.div>

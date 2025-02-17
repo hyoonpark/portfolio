@@ -1,61 +1,69 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import { FaGithub } from 'react-icons/fa';
 import { sectionStyles } from '../styles/common';
 import { scrollAnimation, staggerChildren } from '../styles/animations';
-import drinkImage from '../assets/thumbnail.jpg';
-import ssgImage from '../assets/ssg.png';
 import goodsduckImage from '../assets/goodsduck.png';
+import ssgImage from '../assets/ssg.png';
+import drinkImage from '../assets/thumbnail.jpg';
+
+interface ProjectDetail {
+  title: string;
+  period: string;
+  team: string;
+  description: string;
+  details: string[];
+  techStack: string[];
+  githubUrl: string;
+  image: string;
+}
 
 const Projects: React.FC = () => {
-  const projects = [
+  const { t } = useTranslation();
+
+  const projects: ProjectDetail[] = [
     {
-      id: 1,
-      title: "마이크로서비스 기반 굿즈 경매 플랫폼",
-      period: "2024.04 - 2024.07",
-      team: "백엔드 3명, 프론트엔드 2명",
-      description: "MSA 아키텍처를 활용한 대규모 트래픽 처리가 가능한 경매 시스템 구축",
-      imageUrl: goodsduckImage,
+      title: t('projects.goodsduck.title'),
+      period: t('projects.goodsduck.period'),
+      team: t('projects.goodsduck.team'),
+      description: t('projects.goodsduck.description'),
       details: [
-        "마이페이지, 검색, 후기 마이크로서비스 개발",
-        "Kafka를 활용한 이벤트 기반 아키텍처 구현",
-        "Docker, Docker Compose를 활용한 컨테이너 기반 배포 환경 구축"
+        t('projects.goodsduck.details.1'),
+        t('projects.goodsduck.details.2'),
+        t('projects.goodsduck.details.3')
       ],
-      technologies: ["Spring Boot", "Spring Cloud", "Kafka", "Docker", "Kubernetes", "MySQL", "Redis"],
-      githubUrl: "https://github.com/4-Nuga",
-      demoUrl: null
+      techStack: t('projects.goodsduck.techStack', { returnObjects: true }),
+      githubUrl: t('projects.goodsduck.githubUrl'),
+      image: goodsduckImage
     },
     {
-      id: 2,
-      title: "쓱닷컴 클론코딩",
-      period: "2024.02 - 2024.04",
-      team: "백엔드 3명, 프론트엔드 2명",
-      description: "쓱닷컴의 핵심 기능을 클론코딩하여 설계부터 개발까지 진행",
-      imageUrl: ssgImage,
+      title: t('projects.ssg.title'),
+      period: t('projects.ssg.period'),
+      team: t('projects.ssg.team'),
+      description: t('projects.ssg.description'),
       details: [
-        "querydsl을 활용한 카테고리 상품 조회 최적화",
-        "쿠키를 활용한 비회원 장바구니 구현",
-        "elasticsearch를 활용한 검색 기능 구현"
+        t('projects.ssg.details.1'),
+        t('projects.ssg.details.2'),
+        t('projects.ssg.details.3')
       ],
-      technologies: ["Java", "Spring Boot", "PostGIS", "GitHub Actions", "Docker", "AWS"],
-      githubUrl: "https://github.com/3-isekaiSSG",
-      demoUrl: null
+      techStack: t('projects.ssg.techStack', { returnObjects: true }),
+      githubUrl: t('projects.ssg.githubUrl'),
+      image: ssgImage
     },
     {
-      id: 3,
-      title: "건강한 음주생활을 위한 음주 기록 트래커",
-      period: "2023.10 - 2023.11",
-      team: "백엔드 3명, 프론트엔드 3명",
-      description: "음주량과 건강 상태를 기록하고 분석하는 서비스",
-      imageUrl: drinkImage,
+      title: t('projects.drink.title'),
+      period: t('projects.drink.period'),
+      team: t('projects.drink.team'),
+      description: t('projects.drink.description'),
       details: [
-        "Spring Boot 기반 백엔드 서버 개발",
-        "사용자 음주 패턴 분석 및 리포트 생성",
-        "건강 정보 API 연동 및 데이터 시각화"
+        t('projects.drink.details.1'),
+        t('projects.drink.details.2'),
+        t('projects.drink.details.3')
       ],
-      technologies: ["Spring Boot", "MySQL", "AWS", "Docker", "Jenkins"],
-      githubUrl: "https://github.com/official-dev-ohyes/weeklivernote_v2",
-      demoUrl: null
+      techStack: t('projects.drink.techStack', { returnObjects: true }),
+      githubUrl: t('projects.drink.githubUrl'),
+      image: drinkImage
     }
   ];
 
@@ -66,9 +74,9 @@ const Projects: React.FC = () => {
           className={sectionStyles.title}
           {...scrollAnimation}
         >
-          Projects
+          {t('projects.title')}
         </motion.h2>
-
+        
         <motion.div 
           className={sectionStyles.content}
           variants={staggerChildren.container}
@@ -77,13 +85,13 @@ const Projects: React.FC = () => {
         >
           {projects.map((project) => (
             <motion.div
-              key={project.id}
+              key={project.title}
               variants={staggerChildren.item}
               className="mb-12 last:mb-0 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden"
             >
               <div className="relative h-64 overflow-hidden">
-                <img
-                  src={project.imageUrl}
+                <img 
+                  src={project.image} 
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
@@ -114,38 +122,25 @@ const Projects: React.FC = () => {
                 </ul>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech) => (
+                  {project.techStack.map((tech, idx) => (
                     <span
-                      key={tech}
-                      className={sectionStyles.tag}
+                      key={idx}
+                      className="px-3 py-1 text-sm bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 rounded-full"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-4">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center ${sectionStyles.link}`}
-                  >
-                    <FaGithub className="w-5 h-5 mr-2" />
-                    GitHub
-                  </a>
-                  {project.demoUrl && (
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`flex items-center ${sectionStyles.link}`}
-                    >
-                      <FaExternalLinkAlt className="w-4 h-4 mr-2" />
-                      Demo
-                    </a>
-                  )}
-                </div>
+                <a 
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+                >
+                  <FaGithub className="w-5 h-5" />
+                  <span>GitHub</span>
+                </a>
               </div>
             </motion.div>
           ))}

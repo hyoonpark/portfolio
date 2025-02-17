@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { sectionStyles } from '../styles/common';
 import { scrollAnimation, staggerChildren } from '../styles/animations';
 import { 
-  FaJava, FaPython, FaJs, FaAws, FaUbuntu, FaDocker, FaGit,
-  FaJira
+  FaJava, FaPython, FaJs, FaAws, FaUbuntu, FaDocker, FaGit, FaJira
 } from 'react-icons/fa';
 import { 
   SiSpringboot, SiSpring, SiDjango, SiFlask, SiMysql, 
@@ -12,207 +12,220 @@ import {
   SiGooglecolab, SiGithubactions
 } from 'react-icons/si';
 
+interface SkillDetail {
+  name: string;
+  icon: React.ReactNode;
+  details: string[];
+}
+
+interface SkillCategory {
+  category: string;
+  skills: SkillDetail[];
+}
+
 const Skills: React.FC = () => {
-  const skillCategories = [
+  const { t } = useTranslation();
+
+  const skillCategories: SkillCategory[] = [
     {
-      category: "Language",
+      category: t('skills.language.title'),
       skills: [
         {
           name: "Java",
           icon: <FaJava />,
           details: [
-            "객체지향 프로그래밍 이해 및 활용",
-            "Stream API, Lambda 등 Java 8 이상 기능 활용",
-            "Multi-threading 및 동시성 프로그래밍",
-            "JVM 구조 이해 및 메모리 관리"
+            t('skills.language.java.1'),
+            t('skills.language.java.2'),
+            t('skills.language.java.3'),
+            t('skills.language.java.4')
           ]
         },
         {
           name: "Python",
           icon: <FaPython />,
           details: [
-            "기본 문법 및 객체지향 프로그래밍",
-            "데이터 분석 및 처리",
-            "웹 크롤링 및 자동화 스크립트 작성"
+            t('skills.language.python.1'),
+            t('skills.language.python.2'),
+            t('skills.language.python.3')
           ]
         },
         {
           name: "JavaScript",
           icon: <FaJs />,
           details: [
-            "ES6+ 문법 활용",
-            "비동기 프로그래밍(Promise, async/await)",
-            "DOM 조작 및 이벤트 핸들링"
+            t('skills.language.javascript.1'),
+            t('skills.language.javascript.2'),
+            t('skills.language.javascript.3')
           ]
         }
       ]
     },
     {
-      category: "Backend",
+      category: t('skills.backend.title'),
       skills: [
         {
           name: "Spring Boot",
           icon: <SiSpringboot />,
           details: [
-            "RESTful API 설계 및 구현",
-            "Spring Security를 활용한 인증/인가",
-            "JPA/Hibernate를 이용한 데이터 접근 계층 구현"
+            t('skills.backend.springboot.1'),
+            t('skills.backend.springboot.2'),
+            t('skills.backend.springboot.3')
           ]
         },
         {
           name: "Spring Cloud",
           icon: <SiSpring />,
           details: [
-            "MSA 아키텍처 설계 및 구현",
-            "Service Discovery, Config Server 활용",
-            "API Gateway 적용"
+            t('skills.backend.springcloud.1'),
+            t('skills.backend.springcloud.2'),
+            t('skills.backend.springcloud.3')
           ]
         },
         {
           name: "Django",
           icon: <SiDjango />,
           details: [
-            "MVT 패턴 기반 웹 애플리케이션 개발",
-            "ORM을 활용한 데이터베이스 조작",
-            "Django REST framework 활용"
+            t('skills.backend.django.1'),
+            t('skills.backend.django.2'),
+            t('skills.backend.django.3')
           ]
         },
         {
           name: "Flask",
           icon: <SiFlask />,
           details: [
-            "경량 웹 애플리케이션 개발",
-            "RESTful API 구현",
-            "SQLAlchemy를 통한 데이터베이스 연동"
+            t('skills.backend.flask.1'),
+            t('skills.backend.flask.2'),
+            t('skills.backend.flask.3')
           ]
         },
         {
           name: "Google Colab",
           icon: <SiGooglecolab />,
           details: [
-            "데이터 분석 및 머신러닝 모델 개발",
-            "GPU 활용 학습 환경 구성"
+            t('skills.backend.googlecolab.1'),
+            t('skills.backend.googlecolab.2')
           ]
         }
       ]
     },
     {
-      category: "Database",
+      category: t('skills.database.title'),
       skills: [
         {
           name: "MySQL",
           icon: <SiMysql />,
           details: [
-            "데이터베이스 설계 및 모델링",
-            "성능 최적화 및 인덱스 설계",
-            "트랜잭션 관리"
+            t('skills.database.mysql.1'),
+            t('skills.database.mysql.2'),
+            t('skills.database.mysql.3')
           ]
         },
         {
           name: "MariaDB",
           icon: <SiMariadb />,
           details: [
-            "고가용성 데이터베이스 구성",
-            "백업 및 복구 전략 수립"
+            t('skills.database.mariadb.1'),
+            t('skills.database.mariadb.2')
           ]
         },
         {
           name: "PostgreSQL",
           icon: <SiPostgresql />,
           details: [
-            "관계형 데이터베이스 관리",
-            "JSON 데이터 타입 활용"
+            t('skills.database.postgresql.1'),
+            t('skills.database.postgresql.2')
           ]
         },
         {
           name: "MongoDB",
           icon: <SiMongodb />,
           details: [
-            "NoSQL 데이터베이스 설계",
-            "분산 데이터베이스 구성"
+            t('skills.database.mongodb.1'),
+            t('skills.database.mongodb.2')
           ]
         }
       ]
     },
     {
-      category: "Infra",
+      category: t('skills.devops.title'),
       skills: [
         {
           name: "AWS",
           icon: <FaAws />,
           details: [
-            "EC2, RDS, S3 등 핵심 서비스 활용",
-            "ECS를 통한 컨테이너 오케스트레이션",
-            "CloudWatch를 통한 모니터링"
+            t('skills.devops.aws.1'),
+            t('skills.devops.aws.2')
           ]
         },
         {
           name: "Ubuntu",
           icon: <FaUbuntu />,
           details: [
-            "서버 환경 구성 및 관리",
-            "쉘 스크립트 작성"
+            t('skills.devops.ubuntu.1'),
+            t('skills.devops.ubuntu.2')
           ]
         },
         {
           name: "Docker",
           icon: <FaDocker />,
           details: [
-            "컨테이너 이미지 생성 및 관리",
-            "Docker Compose를 통한 멀티 컨테이너 관리"
+            t('skills.devops.docker.1'),
+            t('skills.devops.docker.2')
           ]
         },
         {
           name: "Nginx",
           icon: <SiNginx />,
           details: [
-            "웹 서버 설정 및 관리",
-            "로드 밸런싱 구성"
+            t('skills.devops.nginx.1'),
+            t('skills.devops.nginx.2'),
+            t('skills.devops.nginx.3')
           ]
         },
         {
           name: "Jenkins",
           icon: <SiJenkins />,
           details: [
-            "CI/CD 파이프라인 구축",
-            "자동화 빌드 및 배포"
+            t('skills.devops.jenkins.1'),
+            t('skills.devops.jenkins.2')
           ]
         },
         {
           name: "GitHub Actions",
           icon: <SiGithubactions />,
           details: [
-            "CI/CD 워크플로우 구성",
-            "자동화된 테스트 및 배포 파이프라인 구축"
+            t('skills.devops.githubactions.1'),
+            t('skills.devops.githubactions.2')
           ]
         }
       ]
     },
     {
-      category: "Collaboration",
+      category: t('skills.collaboration.title'),
       skills: [
         {
           name: "Git",
           icon: <FaGit />,
           details: [
-            "버전 관리 및 브랜치 전략",
-            "코드 리뷰 및 협업"
+            t('skills.collaboration.git.1'),
+            t('skills.collaboration.git.2')
           ]
         },
         {
           name: "Jira",
           icon: <FaJira />,
           details: [
-            "애자일/스크럼 프로세스 관리",
-            "이슈 트래킹"
+            t('skills.collaboration.jira.1'),
+            t('skills.collaboration.jira.2')
           ]
         },
         {
           name: "Gerrit",
           icon: <SiGerrit />,
           details: [
-            "코드 리뷰 시스템 활용",
-            "변경사항 관리"
+            t('skills.collaboration.gerrit.1'),
+            t('skills.collaboration.gerrit.2')
           ]
         }
       ]
@@ -226,7 +239,7 @@ const Skills: React.FC = () => {
           className={sectionStyles.title}
           {...scrollAnimation}
         >
-          Teck Stack
+          {t('skills.title')}
         </motion.h2>
         
         <motion.div 

@@ -4,6 +4,8 @@ import { Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { MoonIcon, SunIcon } from '@heroicons/react/solid';
 import { useTheme } from '../contexts/ThemeContext';
+import LanguageSwitch from './LanguageSwitch';
+import { useTranslation } from 'react-i18next';
 
 interface MenuItem {
   name: string;
@@ -13,18 +15,18 @@ interface MenuItem {
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { theme, toggleTheme } = useTheme();
+  const { t } = useTranslation();
 
   const menuItems: MenuItem[] = [
-    { name: 'About', href: 'hero' },
-    // { name: 'About', href: 'about' },
-    { name: 'Education', href: 'education' },
-    { name: 'Experience', href: 'experience' },
-    { name: 'Certificates', href: 'certificates' },
-    { name: 'Curriculum', href: 'curriculum' },
-    { name: 'Awards', href: 'awards' },
-    { name: 'Skills', href: 'skills' },
-    { name: 'Projects', href: 'projects' },
-    { name: 'Contact', href: 'contact' },
+    { name: t('header.about'), href: 'hero' },
+    { name: t('header.education'), href: 'education' },
+    { name: t('header.experience'), href: 'experience' },
+    { name: t('header.certificates'), href: 'certificates' },
+    { name: t('header.curriculum'), href: 'curriculum' },
+    { name: t('header.awards'), href: 'awards' },
+    { name: t('header.skills'), href: 'skills' },
+    { name: t('header.projects'), href: 'projects' },
+    { name: t('header.contact'), href: 'contact' },
   ];
 
   return (
@@ -61,6 +63,7 @@ const Header: React.FC = () => {
             </div>
           </div>
           <div className="flex items-center">
+            <LanguageSwitch />
             <button
               onClick={toggleTheme}
               className="p-2 rounded-md text-gray-700 hover:text-indigo-600 
