@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
       description: "MSA 아키텍처를 활용한 대규모 트래픽 처리가 가능한 경매 시스템 구축",
       imageUrl: goodsduckImage,
       details: [
-        "주문/결제 마이크로서비스 개발",
+        "마이페이지, 검색, 후기 마이크로서비스 개발",
         "Kafka를 활용한 이벤트 기반 아키텍처 구현",
         "Docker, Docker Compose를 활용한 컨테이너 기반 배포 환경 구축"
       ],
@@ -33,7 +33,9 @@ const Projects: React.FC = () => {
       description: "쓱닷컴의 핵심 기능을 클론코딩하여 설계부터 개발까지 진행",
       imageUrl: ssgImage,
       details: [
-        "백엔드 서버 구현"
+        "querydsl을 활용한 카테고리 상품 조회 최적화",
+        "쿠키를 활용한 비회원 장바구니 구현",
+        "elasticsearch를 활용한 검색 기능 구현"
       ],
       technologies: ["Java", "Spring Boot", "PostGIS", "GitHub Actions", "Docker", "AWS"],
       githubUrl: "https://github.com/3-isekaiSSG",
