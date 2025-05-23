@@ -12,8 +12,8 @@
   },
   "hero": {
     "greeting": "안녕하세요",
-    "title": "몰입할 줄 아는<br/>백엔드 개발자 박하윤입니다",
-    "description": "삼성 청년 SW 아카데미와 신세계아이앤씨 스파로스 아카데미를 통해<br/>실무 경험을 쌓았으며, 백엔드 개발에 대한 전문성과 열정을 추구합니다.",
+    "title": "몰입할 줄 아는<br/> 백엔드 개발자 박하윤입니다",
+    "description": "기술을 배우고 나누는 걸 좋아하는 신입 개발자이며, <br/> 개발에 대한 전문성과 열정을 추구합니다.",
     "contactButton": "연락하기"
   },
   "education": {
@@ -26,7 +26,7 @@
     "title": "경험",
     "project1": {
       "title": "음주 기록 애플리케이션",
-      "period": "2023.10 ~ 운영 예정",
+      "period": "운영 예정",
       "description": "Spring Boot, Spring Cloud 기반 MSA 아키텍처 구현",
       "details": {
         "1": "Java,Spring Boot",
@@ -58,7 +58,7 @@
   },
   "curriculum": {
     "title": "교육과정",
-    "sparos": {
+    "spharos": {
       "title": "신세계아이앤씨 스파로스 아카데미 4기",
       "period": "2024.02 ~ 2024.07",
       "details": {

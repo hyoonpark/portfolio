@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 // import About from './components/About';
 import Education from './components/Education';
-import Experience from './components/Experience';
+// import Experience from './components/Experience';
 import Certificates from './components/Certificates';
 import Curriculum from './components/Curriculum';
 import Awards from './components/Awards';
@@ -22,7 +22,7 @@ const App: React.FC = () => {
         <Hero />
         {/* <About /> */}
         <Education />
-        <Experience />
+        {/* <Experience /> */}
         <Certificates />
         <Curriculum />
         <Awards />

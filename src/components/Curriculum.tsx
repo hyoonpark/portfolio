@@ -8,13 +8,13 @@ const Curriculum: React.FC = () => {
 
   const courses = [
     {
-      title: t('curriculum.sparos.title'),
-      period: t('curriculum.sparos.period'),
+      title: t('curriculum.spharos.title'),
+      period: t('curriculum.spharos.period'),
       icon: <FaLaptopCode />,
       details: [
-        t('curriculum.sparos.details.1'),
-        t('curriculum.sparos.details.2'),
-        t('curriculum.sparos.details.3')
+        t('curriculum.spharos.details.1'),
+        t('curriculum.spharos.details.2'),
+        t('curriculum.spharos.details.3')
       ]
     },
     {

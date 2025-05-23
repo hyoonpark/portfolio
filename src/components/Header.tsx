@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   const menuItems: MenuItem[] = [
     { name: t('header.about'), href: 'hero' },
     { name: t('header.education'), href: 'education' },
-    { name: t('header.experience'), href: 'experience' },
+    // { name: t('header.experience'), href: 'experience' },
     { name: t('header.certificates'), href: 'certificates' },
     { name: t('header.curriculum'), href: 'curriculum' },
     { name: t('header.awards'), href: 'awards' },
